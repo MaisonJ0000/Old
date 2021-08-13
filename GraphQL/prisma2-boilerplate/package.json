@@ -1,0 +1,38 @@
+{
+  "name": "node-graphql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "npm run generate; env-cmd -e dev nodemon src --ext js,graphql --exec babel-node",
+    "migrate:dev": "env-cmd -e dev prisma migrate save --name init --experimental; env-cmd -e dev prisma migrate up --experimental",
+    "migrate:prod": "env-cmd -e prod prisma migrate save --name init --experimental; env-cmd -e prod prisma migrate up --experimental",
+    "build": "npm run generate; babel src --out-dir dist --copy-files",
+    "generate": "prisma generate",
+    "data:dev": "env-cmd -e dev prisma studio --experimental",
+    "data:prod": "env-cmd -e prod prisma studio --experimental",
+    "start": "node dist"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.10.4",
+    "@nexus/schema": "^0.14.0",
+    "@prisma/client": "^2.2.2",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "env-cmd": "^10.1.0",
+    "graphql": "^15.0.0",
+    "graphql-yoga": "^1.16.1",
+    "nexus-prisma": "^0.13.0"
+  },
+  "devDependencies": {
+    "@prisma/cli": "^2.2.2",
+    "nodemon": "^2.0.4"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": true,
+    "trailingComma": "all"
+  }
+}
