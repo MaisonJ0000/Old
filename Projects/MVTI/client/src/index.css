@@ -1,0 +1,57 @@
+/* button */
+.button {
+  padding: 8px 24px;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+.button:hover {
+  cursor: pointer;
+}
+.button--shape-default {
+  color: #fff;
+  background: #1abcbd;
+  border: 2px solid #1abcbd;
+}
+.button--shape-default:hover {
+  color: #fff;
+  background: #014254;
+  border-color: #014254;
+}
+.button--shape-outline {
+  color: #1abcbd;
+  border: 2px solid #1abcbd;
+}
+.button--shape-outline:hover {
+  color: #014254;
+  border-color: #014254;
+}
+
+/* topmenu */
+.menu {
+  width: 100%;
+  background: #444;
+  display: flex;
+  justify-content: space-between;
+}
+.menu__list {
+  overflow: hidden;
+}
+.menu__list li {
+  float: left;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.menu__list a {
+  display: block;
+  transition: all 0.3s ease-in-out;
+  padding: 12px 16px;
+}
+.menu__list a:hover,
+.menu__list a.active {
+  color: #333;
+  background: #ffe246;
+}
