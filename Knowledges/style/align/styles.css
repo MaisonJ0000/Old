@@ -1,0 +1,22 @@
+table {
+  height: 100%;
+}
+
+tr, td {
+  border: 1px solid #aaa;
+}
+
+.high-height {
+  height: 400px;
+}
+
+button {
+  display: block;
+}
+
+.split-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* IE 11 */
+}
